@@ -1,0 +1,113 @@
+/* the container that holds every thing in it and its a div ele*/
+.container {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 10px auto;
+    border-radius: 25px;
+    z-index: 100;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.18),
+            rgba(255, 255, 255, 0.05));
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 24px;
+}
+
+
+/* the logo and the name of the site beside it and its called (<span>edugate</span>)*/
+.logo {
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    color: #ffff;
+}
+
+.logo img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+
+}
+
+/* the links that will help you to vist the sections that you want*/
+.transfares {
+    list-style: none;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.transfares a {
+    text-decoration: none;
+    color: #ffff;
+    text-align: center;
+    position: relative;
+}
+
+.transfares a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+    background-color: #2d0652;
+    width: 0;
+    height: 2px;
+    transition: 0.3s;
+}
+
+.transfares a:hover:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+    background-color: #2d0652;
+    width: 100%;
+    height: 2px;
+}
+
+/* the auth button about login if you are a user or signup of you new */
+.authButtons {
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.authButtons button {
+    color: #ffff;
+    text-transform: uppercase;
+    background-color: #2d0652;
+    border: none;
+    padding: 6px;
+    width: 100px;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-family: var(--English--);
+}
+
+.authButtons button:hover {
+    transform: scale(1.1);
+}
+
+.authButtons .login {
+    color: #2d0652;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: #2d0652 solid 2px;
+    padding: 4px;
+    border-radius: 10px;
+    width: 100px;
+}

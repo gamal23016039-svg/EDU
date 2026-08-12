@@ -1,0 +1,76 @@
+.theHoldingErea {
+    background-color: blueviolet;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 5px -5px 20px #7F5AF0;
+    padding: 20px 40px;
+    font-family: var(--English--);
+}
+
+.title {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.borderCourses {
+    border: solid white 3px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.thecourses {
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.courseapper {
+    flex: 0 0 200px;
+    background-color: white;
+    border-radius: 15px;
+    border: #9B5DE5 2px solid;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.thePhoto img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.theAddres h3 {
+    padding: 10px 0;
+    color: #222;
+}
+
+.theDiscription p {
+    padding-bottom: 10px;
+    color: #222;
+}
+
+.actionGoCourse .actionGo {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #7F5AF0;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+:global(.swiper-button-next),
+:global(.swiper-button-prev) {
+    color: white !important;
+    width: 30px !important;
+    height: 30px !important;
+}
+
+:global(.swiper-button-next::after),
+:global(.swiper-button-prev::after) {
+    font-size: 18px !important;
+    font-weight: bold !important;
+}

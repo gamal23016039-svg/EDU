@@ -1,0 +1,32 @@
+.teacherslanding {
+    background-color: blueviolet;
+    padding: 20px 40px;
+    color: white;
+}
+
+.theacherstitle {
+    font-size: 2.5rem;
+}
+
+.boredertlsep {
+    border: solid white 3px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.teachersdetails {
+    width: 100%;
+    padding: 20px;
+}
+
+.teachersid {
+    flex: 0 0 200px;
+    background-color: white;
+    color: #222;
+    border-radius: 15px;
+    border: #9B5DE5 2px solid;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}

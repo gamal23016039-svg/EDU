@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1081.75 1485.07">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: NotoIKEAArabic-Bold, 'Noto IKEA Arabic';
+        font-size: 80px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #16161a;
+      }
+
+      .cls-1, .cls-3 {
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        font-family: ReemKufi-Bold, 'Reem Kufi';
+        font-size: 250px;
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="107.46" y1="484.32" x2="975.25" y2="484.32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6d28d9"/>
+      <stop offset=".27" stop-color="#6e2cdb"/>
+      <stop offset=".57" stop-color="#733ae1"/>
+      <stop offset=".9" stop-color="#7b51ec"/>
+      <stop offset="1" stop-color="#7f5af0"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <path class="cls-4" d="M568.34,0h-65.84C284.32,0,107.46,176.87,107.46,395.04v558.42c0,10.5,10.5,17.75,20.32,14.03l191.88-72.73v-489.72c0-122,98.9-220.89,220.89-220.89h.66c122,0,220.89,98.9,220.89,220.89v491.41s191.98,71.23,191.98,71.23c9.8,3.64,20.22-3.61,20.22-14.06V405.95C974.29,181.75,792.54,0,568.34,0Z"/>
+      <text class="cls-3" transform="translate(0 1273.33)"><tspan class="cls-2" x="0" y="0">Edu </tspan><tspan x="501" y="0">Gate</tspan></text>
+      <text class="cls-1" transform="translate(142.55 1435.79)"><tspan x="0" y="0">بوابتك لمستقبل أفضل</tspan></text>
+    </g>
+  </g>
+</svg>

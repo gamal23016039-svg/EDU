@@ -1,0 +1,68 @@
+.container {
+    width: 20%;
+    height: 100vh;
+    color: #222;
+    padding: 20px 10px;
+    border-right: solid 2px #5e60ce86;
+}
+
+.greetingUser {
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.greetingUser .iconman {
+    background: #5e60ce86;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.borderseparate {
+    border: #5e60ce86 solid 1px;
+    border-radius: 1px;
+    margin: 20px 0;
+}
+
+.thecourses,
+.thelessons,
+.theusers {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin: 20px 0;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.thecourses:hover {
+    background-color: rgba(0, 0, 0, 0.089);
+}
+
+.thelessons:hover {
+    background-color: rgba(0, 0, 0, 0.089);
+}
+
+.theusers:hover {
+    background-color: rgba(0, 0, 0, 0.089);
+}
+
+.iconbook,
+.iconlesson,
+.iconuser {
+    background: #5e60ce86;
+    padding: 5px;
+    height: inherit;
+    border-radius: 5px;
+    color: white;
+}
+
+.nav {
+    flex: 1;
+    text-decoration: none;
+    color: #222;
+}

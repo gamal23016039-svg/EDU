@@ -1,0 +1,45 @@
+.coursePage {
+    padding: 24px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #433b12;
+    margin-bottom: 20px;
+}
+
+.courseGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.courseCard {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #eee6bd;
+    box-shadow: 0 10px 25px rgba(76, 62, 25, 0.06);
+}
+
+.courseCard h3 {
+    margin: 0 0 12px;
+    color: #45360a;
+}
+
+.courseCard p {
+    color: #625b44;
+    font-size: 14px;
+}
+
+.status {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #efe8b7;
+    color: #564318;
+    font-size: 12px;
+    font-weight: 700;
+}

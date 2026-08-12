@@ -1,0 +1,56 @@
+.lessonsPage {
+  padding: 24px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1a2a43;
+  margin-bottom: 20px;
+}
+
+.lessonGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.lessonCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #dcecf1;
+  box-shadow: 0 10px 25px rgba(31, 83, 105, 0.06);
+}
+
+.lessonCard h3 {
+  margin: 0 0 12px;
+  color: #173947;
+}
+
+.lessonCard p {
+  color: #5d6c72;
+  font-size: 14px;
+}
+
+.lessonMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.progress {
+  font-weight: 700;
+  color: #16a673;
+}
+
+.openButton {
+  background: #125d76;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}

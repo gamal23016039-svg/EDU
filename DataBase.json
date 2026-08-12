@@ -1,0 +1,158 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Mohamed Wael",
+      "email": "mohamed@gmail.com",
+      "password": "123456",
+      "image": "https://i.pravatar.cc/150?img=11",
+      "role": "student",
+      "token": "token_mohamed_123",
+      "blocked": false
+    },
+    {
+      "id": "2",
+      "name": "Ahmed Ali",
+      "email": "ahmed@gmail.com",
+      "password": "654321",
+      "image": "https://i.pravatar.cc/150?img=12",
+      "role": "teacher",
+      "token": "token_ahmed_456",
+      "blocked": "false"
+    },
+    {
+      "id": "3",
+      "name": "Ahmed Ali",
+      "email": "ahmed@gmail.com",
+      "password": "654321",
+      "image": "https://i.pravatar.cc/150?img=12",
+      "role": "teacher",
+      "token": "token_ahmed_456",
+      "blocked": "false"
+    },
+    {
+      "id": "4",
+      "name": "Ahmed Ali",
+      "email": "ahmed@gmail.com",
+      "password": "654321",
+      "image": "https://i.pravatar.cc/150?img=12",
+      "role": "teacher",
+      "token": "token_ahmed_456",
+      "blocked": "false"
+    }
+  ],
+  "dashboard": {
+    "hours": 75,
+    "completedLessons": 120,
+    "courses": 8,
+    "weeklyProgress": 84
+  },
+  "courses": [
+    {
+      "id": "1",
+      "title": "React JS",
+      "image": "https://i.pravatar.cc/300?img=12",
+      "teacher": "Ahmed Ali",
+      "progress": 65
+    },
+    {
+      "id": "2",
+      "title": ".NET",
+      "teacher": "Mohamed Hassan",
+      "image": "https://i.pravatar.cc/300?img=12",
+      "progress": 30
+    },
+    {
+      "id": "3",
+      "title": "JavaScript",
+      "image": "https://i.pravatar.cc/300?img=12",
+      "teacher": "Ali Adel",
+      "progress": 100
+    },
+    {
+      "id": "4",
+      "title": "JavaScript",
+      "image": "https://i.pravatar.cc/300?img=12",
+      "teacher": "Ali Adel",
+      "progress": 100
+    },
+    {
+      "id": "5",
+      "title": "JavaScript",
+      "image": "https://i.pravatar.cc/300?img=12",
+      "teacher": "Ali Adel",
+      "progress": 100
+    },
+    {
+      "id": "6",
+      "title": "JavaScript",
+      "image": "https://i.pravatar.cc/300?img=12",
+      "teacher": "Ali Adel",
+      "progress": 100
+    },
+    {
+      "id": "7",
+      "title": "JavaScript",
+      "image": "https://i.pravatar.cc/300?img=12",
+      "teacher": "Ali Adel",
+      "progress": 100
+    },
+    {
+      "id": "8",
+      "title": "JavaScript",
+      "image": "https://i.pravatar.cc/300?img=12",
+      "teacher": "Ali Adel",
+      "progress": 100
+    }
+  ],
+  "notifications": [
+    {
+      "id": "1",
+      "title": "New Lesson",
+      "message": "React Context uploaded"
+    },
+    {
+      "id": "2",
+      "title": "Assignment",
+      "message": "Complete JavaScript Quiz"
+    }
+  ],
+  "chart": [
+    {
+      "day": "Sat",
+      "hours": 2,
+      "id": "ekSlfltN5ks"
+    },
+    {
+      "day": "Sun",
+      "hours": 4,
+      "id": "HwHpOC_YbXU"
+    },
+    {
+      "day": "Mon",
+      "hours": 6,
+      "id": "mz-a3e--SP8"
+    },
+    {
+      "day": "Tue",
+      "hours": 5,
+      "id": "77frM5y9MbA"
+    },
+    {
+      "day": "Wed",
+      "hours": 3,
+      "id": "Qe3eS6ijkVI"
+    },
+    {
+      "day": "Thu",
+      "hours": 7,
+      "id": "QThqq7EfA7c"
+    },
+    {
+      "day": "Fri",
+      "hours": 1,
+      "id": "0IhGquN0Cik"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

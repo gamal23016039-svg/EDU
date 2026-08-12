@@ -1,0 +1,78 @@
+.theDad {
+    background: url(../assets/GPT.png);
+}
+
+
+.loginPage {
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #222;
+    margin: auto;
+}
+
+.theRightSide {
+    width: 30%;
+    background-color: #ffff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    box-shadow: 0 0 20px #8f34b9a4;
+}
+
+.eduGatePhoto img {
+    width: 50px;
+}
+
+.theDad label {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.theDad input {
+    display: block;
+    padding: 10px 15px;
+    margin: 10px auto;
+    width: 100%;
+}
+
+.theDad button {
+    width: 90%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: #ffff;
+    background-color: #7F5AF0;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-family: var(--English--);
+    cursor: pointer;
+}
+
+.theLeftSide {
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.thePhoto {
+    width: 400px;
+}
+
+.names {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 90%;
+    margin: auto;
+}

@@ -1,0 +1,41 @@
+.studentsPage {
+    padding: 24px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #453b12;
+    margin-bottom: 20px;
+}
+
+.studentGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.studentCard {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #eee6bd;
+    box-shadow: 0 10px 25px rgba(76, 62, 25, 0.06);
+}
+
+.studentCard h3 {
+    margin: 0 0 12px;
+    color: #45360a;
+}
+
+.studentCard p {
+    color: #625b44;
+    font-size: 14px;
+}
+
+.progress {
+    display: inline-block;
+    margin-top: 12px;
+    color: #806713;
+    font-weight: 800;
+}

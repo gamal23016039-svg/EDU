@@ -1,0 +1,186 @@
+/* this the div that holds every thing he is the dad */
+.landingPage {
+    width: 100%;
+    height: 100;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    /* background: url(../../assets/Background.jpeg);*/
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    color: #ffff;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 5px 20px #7F5AF0;
+}
+
+/* this is the div of the label generation word */
+.nextGeneration {
+    border: solid 0.5px #e5e7eb71;
+    background-color: #7f5af0a4;
+    width: fit-content;
+    border-radius: 15px;
+    padding: 4px 15px 4px 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    font-family: var(--Arabic--);
+    color: #ffff;
+}
+
+/* the greeting that hold the three words of (welcome to edugate) and is about the left side of the hero */
+.greeting {
+    padding: 20px 0;
+}
+
+/* this is about the word (welcome to) */
+.greeting .welcome {
+    font-size: 4rem;
+}
+
+/* this is about the word (edu) */
+.greeting .edu {
+    font-size: 5rem;
+    display: inline;
+}
+
+/* this is about the word (gate) */
+.greeting .gate {
+    color: #2d0652;
+    font-size: 5rem;
+    display: inline;
+}
+
+/* this is about the description div */
+.description {
+    text-align: start;
+    font-size: 1.5rem;
+    padding: 0 9px;
+}
+
+/* this is about the description div that holds (your first gate to sucsess) */
+.description span {
+    color: #2d0652;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+/* this is about the buttons of get started and watch demo */
+.buttons {
+    text-align: start;
+    padding: 25px 9px;
+    display: flex;
+    gap: 10px;
+}
+
+/* this is about the button of get started */
+.getStarted {
+    background-color: #2d0652;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 17px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: var(--English--);
+    width: fit-content;
+    transition: 0.3s;
+    border: none;
+}
+
+/* this is about the button of watch demo */
+.watchDemo {
+    background-color: transparent;
+    border: #2d0652 solid 2px;
+    color: #2d0652;
+    padding: 8px 13px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: var(--English--);
+    font-size: 17px;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+/* this is about the buttons of get started and watch demo and the hovers to them */
+.watchDemo:hover {
+    transform: scale(1.1);
+}
+
+.getStarted:hover {
+    transform: scale(1.1);
+}
+
+/*==================================================the right side=================================================*/
+
+/* this is the container that holds the right side of hero */
+.theImageOfBoy {
+    position: relative;
+}
+
+.theImageOfBoy img {
+    width: 400px;
+    position: relative;
+    bottom: -20px;
+}
+
+.theFloatingText {
+    position: absolute;
+    top: 150px;
+    right: -20px;
+    color: #ffff;
+    font-weight: bold;
+    background-color: #2d0652;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 19px;
+    animation: glow 4s infinite alternate;
+    font-family: var(--Arabic--);
+}
+
+.theFloatingTextTwo {
+    position: absolute;
+    bottom: 40px;
+    left: -30px;
+    color: #ffff;
+    font-weight: bold;
+    background-color: #2d0652;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    animation: glow 2s infinite alternate;
+    font-family: var(--Arabic--);
+}
+
+.theFloatingTextThree {
+    position: absolute;
+    bottom: 100px;
+    right: -30px;
+    color: #ffff;
+    font-weight: bold;
+    background-color: #2d0652;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    animation: glow 2s infinite alternate;
+    font-family: var(--Arabic--);
+}
+
+@keyframes glow {
+    to {
+        filter: drop-shadow(0 0 10px #7F5AF0);
+        transform: translateY(-10px);
+    }
+}
+
+.grad {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
