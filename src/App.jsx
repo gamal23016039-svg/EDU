@@ -18,58 +18,57 @@ import Users from "./DashBoard/DashAdmin/PagesAdmin/Users/Users";
 import Courses from "./DashBoard/DashAdmin/PagesAdmin/Courses/CoursesDash";
 import LessonsDash from "./DashBoard/DashAdmin/PagesAdmin/Lessons/LessonsDash";
 import ForgetPassword from "./LoginRegisterPage/ForgetPassword/ForgetPass";
+import Verify from "./LoginRegisterPage/ForgetPassword/VerifyOTP/Verify";
 import DashLayout from "./DashBoard/DashAdmin/PagesAdmin/DashLayout/DashLayout";
 import CoursePage from "./CoursesPage/CoursesPage";
 
 function App() {
   return (
     <Routes>
+      <Route path="/" element={<LandingPage />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Register" element={<Register />} />
       <Route path="/forgetpassword" element={<ForgetPassword />} />
+      <Route path="/verify" element={<Verify />} />
       <Route path="/courses/:id" element={<CoursePage />} />
 
-      {/* the routes of the dashadmin */}
-      <Route path="/dashboardadmin" element={<DashAdmin />}>
-        <Route index element={<DashLayout />} />
-        <Route path="users" element={<Users />} />
-        <Route path="courses" element={<Courses />} />
-        <Route path="lessons" element={<LessonsDash />} />
-      </Route>
-      {/* *************************** */}
-
-      <Route path="/dashboardstudent" element={<DashStudent />}>
-        <Route index element={<DashStudentLayout />} />
-        <Route path="lessons" element={<LessonsStudent />} />
-        <Route path="courses" element={<LessonsStudent />} />
-        <Route path="profile" element={<DashStudentLayout />} />
-        <Route path="settings" element={<DashStudentLayout />} />
-      </Route>
-
-      <Route path="/dashboardteacher" element={<DashTeacher />}>
-        <Route index element={<DashTeacherLayout />} />
-        <Route path="courses" element={<CoursesTeacher />} />
-        <Route path="students" element={<StudentsTeacher />} />
-        <Route path="lessons" element={<LessonsTeacher />} />
-        <Route path="profile" element={<DashTeacherLayout />} />
-      </Route>
-
-      <Route element={<ProtectedRoutes />}></Route>
-
-      <Route element={<RoleProtected allowedRoles={["student"]} />}>
-        {/* <Route path="student" element={<StudentLayout />} />*/}
-      </Route>
-      <Route element={<RoleProtected allowedRoles={["teacher"]} />}>
-        {/*<Route path="teacher" element={<TeacherLayout />} />*/}
-      </Route>
-
-      {/*<Route element={<RoleProtected allowedRoles={["admin"]} />}>
+      <Route element={<ProtectedRoutes />}>
         <Route path="/dashboardadmin" element={<DashAdmin />}>
-          <Route path="usres" element={<Users />} />
+          <Route index element={<DashLayout />} />
+          <Route path="users" element={<Users />} />
           <Route path="courses" element={<Courses />} />
+          <Route path="lessons" element={<LessonsDash />} />
         </Route>
-      </Route>*/}
-      <Route path="/" element={<LandingPage />} />
+
+        <Route path="/dashboardstudent" element={<DashStudent />}>
+          <Route index element={<DashStudentLayout />} />
+          <Route path="lessons" element={<LessonsStudent />} />
+          <Route path="courses" element={<LessonsStudent />} />
+          <Route path="profile" element={<DashStudentLayout />} />
+          <Route path="settings" element={<DashStudentLayout />} />
+        </Route>
+
+        <Route path="/dashboardteacher" element={<DashTeacher />}>
+          <Route index element={<DashTeacherLayout />} />
+          <Route path="courses" element={<CoursesTeacher />} />
+          <Route path="students" element={<StudentsTeacher />} />
+          <Route path="lessons" element={<LessonsTeacher />} />
+          <Route path="profile" element={<DashTeacherLayout />} />
+        </Route>
+      </Route>
+
+      <Route element={<RoleProtected allowedRoles={["Student"]} />}>
+        <Route path="/dashboardstudent" element={<DashStudent />} />
+      </Route>
+
+      <Route element={<RoleProtected allowedRoles={["Teacher"]} />}>
+        <Route path="/dashboardteacher" element={<DashTeacher />} />
+      </Route>
+
+      <Route element={<RoleProtected allowedRoles={["Admin"]} />}>
+        <Route path="/dashboardadmin" element={<DashAdmin />} />
+      </Route>
+
       <Route path="*" element={<Eror />} />
     </Routes>
   );

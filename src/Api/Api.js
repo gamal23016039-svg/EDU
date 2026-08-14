@@ -1,29 +1,40 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "http://localhost:8080";
 
 export async function api(endpoint, options = {}) {
-  try {
-    const token = localStorage.getItem("token");
+  const token = localStorage.getItem("token");
+  const isFormData = options.body instanceof FormData;
 
-    const response = await fetch(`${BASE_URL}${endpoint}`, {
-      ...options,
-      headers: {
-        "Content-Type": "application/json",
-        ...(token && {
-          Authorization: `Bearer ${token}`,
-        }),
-        ...options.headers,
-      },
-    });
+  const response = await fetch(`${BASE_URL}${endpoint}`, {
+    ...options,
+    headers: {
+      ...(isFormData ? {} : { "Content-Type": "application/json" }),
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      ...options.headers,
+    },
+  });
 
-    const data = await response.json();
+  const contentType = response.headers.get("content-type") || "";
+  const data = contentType.includes("application/json")
+    ? await response.json()
+    : await response.text();
 
-    if (!response.ok) {
-      throw new Error(data.message || "Something went wrong");
-    }
+  if (
+    !response.ok ||
+    (data &&
+      typeof data === "object" &&
+      (data.status === "fail" || data.status === "error"))
+  ) {
+    const message =
+      typeof data === "string"
+        ? data
+        : data?.msg ||
+          data?.message ||
+          `Request failed with status ${response.status}`;
 
-    return data;
-  } catch (error) {
-    console.error(error);
-    throw error;
+    throw new Error(message);
   }
+
+  return data;
 }
+
+export default api;

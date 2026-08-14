@@ -5,7 +5,7 @@
 .title {
   font-size: 30px;
   font-weight: 700;
-  color: #1a2a43;
+  color: #5E60CE;
   margin-bottom: 20px;
 }
 
@@ -19,17 +19,24 @@
   background: #fff;
   border-radius: 16px;
   padding: 20px;
-  border: 1px solid #dcecf1;
-  box-shadow: 0 10px 25px rgba(31, 83, 105, 0.06);
+  border: 1px solid #7F5AF020;
+  box-shadow: 0 10px 25px rgba(94, 96, 206, 0.06);
+  transition: all 0.3s ease;
+}
+
+.lessonCard:hover {
+  border-color: #9B5DE5;
+  box-shadow: 0 10px 25px rgba(155, 93, 229, 0.12);
+  transform: translateY(-2px);
 }
 
 .lessonCard h3 {
   margin: 0 0 12px;
-  color: #173947;
+  color: #5E60CE;
 }
 
 .lessonCard p {
-  color: #5d6c72;
+  color: #7F5AF0;
   font-size: 14px;
 }
 
@@ -42,11 +49,11 @@
 
 .progress {
   font-weight: 700;
-  color: #16a673;
+  color: #9B5DE5;
 }
 
 .openButton {
-  background: #125d76;
+  background: linear-gradient(135deg, #5E60CE, #7F5AF0);
   color: white;
   border: none;
   padding: 10px 14px;

@@ -1,6 +1,25 @@
+import { useEffect, useState } from "react";
+import { GetDashBoardStudent } from "../../../../Api/DashBoard";
 import layoutStyle from "./DashStudentLayout.module.css";
 
 function DashStudentLayout() {
+  const [stats, setStats] = useState({});
+
+  useEffect(() => {
+    async function loadStats() {
+      try {
+        const dashboard = await GetDashBoardStudent();
+        setStats(dashboard || {});
+      } catch (error) {
+        console.error(
+          error.message || "Could not load student dashboard stats",
+        );
+      }
+    }
+
+    loadStats();
+  }, []);
+
   return (
     <section className={layoutStyle.dashStudentLayout}>
       <div className={layoutStyle.welcome}>
@@ -14,35 +33,35 @@ function DashStudentLayout() {
       <div className={layoutStyle.summaryGrid}>
         <article className={layoutStyle.summaryCard}>
           <h3>Courses</h3>
-          <strong>04</strong>
+          <strong>{stats.coursescount ?? 0}</strong>
           <span>Active enrollments</span>
         </article>
 
         <article className={layoutStyle.summaryCard}>
           <h3>Lessons</h3>
-          <strong>18</strong>
+          <strong>{stats.lessonscount ?? 0}</strong>
           <span>Available lessons</span>
         </article>
 
         <article className={layoutStyle.summaryCard}>
-          <h3>Progress</h3>
-          <strong>76%</strong>
-          <span>Overall completion</span>
+          <h3>Assignments</h3>
+          <strong>{stats.assignmentcount ?? 0}</strong>
+          <span>Assigned tasks</span>
         </article>
 
         <article className={layoutStyle.summaryCard}>
-          <h3>Certificates</h3>
-          <strong>02</strong>
-          <span>Achievements unlocked</span>
+          <h3>Submissions</h3>
+          <strong>{stats.submissioncount ?? 0}</strong>
+          <span>Completed submissions</span>
         </article>
       </div>
 
       <section className={layoutStyle.upcomingPanel}>
         <h2>Upcoming Study Plan</h2>
         <ul>
-          <li>Complete React Basics lesson</li>
-          <li>Join JavaScript assignment review call</li>
-          <li>Finish UI Design project exercise</li>
+          <li>Complete your enrolled lessons</li>
+          <li>Track pending assignments</li>
+          <li>Continue learning progress</li>
         </ul>
       </section>
     </section>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function ButtonLoginRegster() {
   return (
     <div className={styles.authButtons}>
-      <Link>
+      <Link to="/Register">
         <button className={styles.signup}>sign up</button>
       </Link>
       <Link to="/Login">

@@ -1,6 +1,6 @@
 .sidebar {
     width: 260px;
-    background: linear-gradient(180deg, #7F5AF0, #F15BB5);
+    background: linear-gradient(135deg, #5E60CE 0%, #7F5AF0 50%, #9B5DE5 100%);
     color: white;
     padding: 22px 20px;
     display: flex;
@@ -57,7 +57,9 @@
     padding: 12px 14px;
     border-radius: 12px;
     font-weight: 800;
-    background: #F15BB5;
+    background: rgba(155, 93, 229, 0.4);
+    border-left: 3px solid #9B5DE5;
+    padding-left: 11px;
 }
 
 .logout {

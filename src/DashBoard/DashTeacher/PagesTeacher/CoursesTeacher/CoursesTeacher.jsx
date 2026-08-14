@@ -1,6 +1,10 @@
+import { useState } from "react";
 import courseStyle from "./CoursesTeacher.module.css";
+import CreateCourseModal from "./CreateCourseModal";
 
 function CoursesTeacher() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const courses = [
     {
       title: "Frontend Essentials",
@@ -22,9 +26,25 @@ function CoursesTeacher() {
     },
   ];
 
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <section className={courseStyle.coursePage}>
-      <h1 className={courseStyle.title}>My Courses</h1>
+      <div className={courseStyle.pageHeader}>
+        <h1 className={courseStyle.title}>My Courses</h1>
+        <button
+          className={courseStyle.createCourseBtn}
+          onClick={handleOpenModal}
+        >
+          + Create Course
+        </button>
+      </div>
 
       <div className={courseStyle.courseGrid}>
         {courses.map((course, index) => (
@@ -36,6 +56,9 @@ function CoursesTeacher() {
           </article>
         ))}
       </div>
+
+      {/* Create Course Modal */}
+      <CreateCourseModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </section>
   );
 }

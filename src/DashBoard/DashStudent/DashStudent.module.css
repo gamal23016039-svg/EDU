@@ -1,7 +1,7 @@
 .dashboard {
   display: flex;
   min-height: 100vh;
-  background: #eef6f8;
+  background: linear-gradient(135deg, #fafaf8 0%, #f9f7f0 100%);
 }
 
 .content {

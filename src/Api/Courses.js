@@ -1,5 +1,6 @@
 import { api } from "./Api";
 
 export async function GetCourses() {
-  return api("/courses");
+  const response = await api("/api/cource/cources");
+  return response?.data?.cource || [];
 }

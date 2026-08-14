@@ -1,10 +1,16 @@
 import side from "./SideBarAdmin.module.css";
 import { useContext } from "react";
 import { AuthContext } from "../../../Contexts/AuthContext";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function SideBarAdmin() {
-  const { user } = useContext(AuthContext);
+  const { user, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/");
+  };
 
   return (
     <div className={side.container}>
@@ -47,12 +53,20 @@ function SideBarAdmin() {
         {/* the lessons */}
         <div className={side.thelessons}>
           <div className={side.iconlesson}>
-            <i className="fa-solid fa-book"></i>
+            <i className="fa-solid fa-book-open"></i>
           </div>
           <NavLink to="/dashboardadmin/lessons" className={side.nav}>
             Lessons
           </NavLink>
         </div>
+      </div>
+
+      {/* Logout Section */}
+      <div className={side.logoutSection}>
+        <button className={side.logoutButton} onClick={handleLogout}>
+          <i className="fa-solid fa-sign-out-alt"></i>
+          Logout
+        </button>
       </div>
       {/* ======================================================== */}
     </div>

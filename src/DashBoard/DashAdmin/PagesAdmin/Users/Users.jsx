@@ -8,12 +8,15 @@ function AllUsers() {
   const [users, setUsers] = useState([]);
   const [busyUserId, setBusyUserId] = useState(null);
 
-  const filteredUsers = users.filter(
-    (user) =>
-      user.name.toLowerCase().includes(search.toLowerCase()) ||
-      user.email.toLowerCase().includes(search.toLowerCase()) ||
-      user.role.toLowerCase().includes(search.toLowerCase()),
-  );
+  const filteredUsers = users.filter((user) => {
+    const name = `${user.firstName || ""} ${user.lastName || ""}`.trim();
+    const role = String(user.role || "").toLowerCase();
+    return (
+      name.toLowerCase().includes(search.toLowerCase()) ||
+      (user.email || "").toLowerCase().includes(search.toLowerCase()) ||
+      role.includes(search.toLowerCase())
+    );
+  });
 
   async function handleBlockUser(user) {
     const isCurrentlyBlocked =
@@ -91,9 +94,11 @@ function AllUsers() {
             return (
               <tr key={user.id}>
                 <td>{user.id}</td>
-                <td>{user.name}</td>
+                <td>
+                  {`${user.firstName || ""} ${user.lastName || ""}`.trim()}
+                </td>
                 <td>{user.email}</td>
-                <td>{user.password}</td>
+                <td>{user.password || "—"}</td>
                 <td>{user.role}</td>
                 <td>{isBlocked ? "Blocked" : "Active"}</td>
                 <td>

@@ -8,7 +8,7 @@
 .forgetcontainer {
     width: 30%;
     padding: 20px;
-    background-color: blueviolet;
+    background-color: #7F5AF0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -28,6 +28,8 @@
     width: 100%;
     border: none;
     outline: none;
+    background-color: white;
+    color: #222;
     border-radius: 15px;
     padding: 10px 15px;
     margin: 5px 0;
@@ -45,7 +47,7 @@
     border: none;
     outline: none;
     padding: 10px 0;
-    color: #222;
+    color: white;
     font-size: 17px;
     cursor: pointer;
 }

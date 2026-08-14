@@ -1,68 +1,257 @@
+/* Main Container */
 .container {
     width: 20%;
-    height: 100vh;
-    color: #222;
-    padding: 20px 10px;
-    border-right: solid 2px #5e60ce86;
+    background: linear-gradient(135deg, #5E60CE 0%, #7F5AF0 50%, #9B5DE5 100%);
+    color: white;
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 15px rgba(94, 96, 206, 0.15);
 }
 
+/* User Greeting Section */
 .greetingUser {
     text-transform: capitalize;
     letter-spacing: 1.5px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 14px;
+    padding: 18px 14px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    margin-bottom: 28px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.greetingUser:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateX(4px);
 }
 
 .greetingUser .iconman {
-    background: #5e60ce86;
-    padding: 5px;
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 8px;
     color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
 }
 
+.greetingUser:hover .iconman {
+    background: white;
+    color: #5E60CE;
+    transform: scale(1.1);
+}
+
+.greetingUser span {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Separator */
 .borderseparate {
-    border: #5e60ce86 solid 1px;
-    border-radius: 1px;
+    border: rgba(255, 255, 255, 0.25) solid 1px;
+    border-radius: 2px;
     margin: 20px 0;
 }
 
+/* Control List */
+.controllist {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Navigation Items */
 .thecourses,
 .thelessons,
 .theusers {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 14px;
     width: 100%;
-    margin: 20px 0;
-    padding: 5px 10px;
+    padding: 12px 14px;
     border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-left: 3px solid transparent;
 }
 
-.thecourses:hover {
-    background-color: rgba(0, 0, 0, 0.089);
-}
-
-.thelessons:hover {
-    background-color: rgba(0, 0, 0, 0.089);
-}
-
+.thecourses:hover,
+.thelessons:hover,
 .theusers:hover {
-    background-color: rgba(0, 0, 0, 0.089);
+    background: rgba(255, 255, 255, 0.2);
+    border-left-color: white;
+    padding-left: 16px;
+    transform: translateX(2px);
 }
 
+/* Icons */
 .iconbook,
 .iconlesson,
 .iconuser {
-    background: #5e60ce86;
-    padding: 5px;
-    height: inherit;
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 10px;
+    height: 38px;
+    width: 38px;
+    border-radius: 8px;
     color: white;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
 }
 
+.thecourses:hover .iconbook,
+.thelessons:hover .iconlesson,
+.theusers:hover .iconuser {
+    background: white;
+    color: #5E60CE;
+    transform: scale(1.15);
+}
+
+/* Navigation Link */
 .nav {
     flex: 1;
     text-decoration: none;
-    color: #222;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.thecourses:hover .nav,
+.thelessons:hover .nav,
+.theusers:hover .nav {
+    color: white;
+}
+
+/* Active Navigation State */
+:global(.nav.active) {
+    color: white !important;
+    font-weight: 700;
+}
+
+.thecourses:has(:global(.nav.active)),
+.thelessons:has(:global(.nav.active)),
+.theusers:has(:global(.nav.active)) {
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-left-color: white !important;
+    box-shadow: inset -4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.thecourses:has(:global(.nav.active)) .iconbook,
+.thelessons:has(:global(.nav.active)) .iconlesson,
+.theusers:has(:global(.nav.active)) .iconuser {
+    background: white !important;
+    color: #5E60CE !important;
+}
+
+/* Logout Button Area */
+.logoutSection {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logoutButton {
+    width: 100%;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    letter-spacing: 0.5px;
+}
+
+.logoutButton:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.logoutButton:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        width: 22%;
+        padding: 20px 12px;
+    }
+
+    .greetingUser {
+        padding: 14px 10px;
+        gap: 10px;
+    }
+
+    .greetingUser span {
+        font-size: 12px;
+    }
+
+    .thecourses,
+    .thelessons,
+    .theusers {
+        padding: 10px 10px;
+        gap: 10px;
+    }
+
+    .iconbook,
+    .iconlesson,
+    .iconuser {
+        height: 34px;
+        width: 34px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .nav {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 25%;
+        padding: 16px 8px;
+    }
+
+    .greetingUser {
+        padding: 12px 8px;
+        font-size: 11px;
+    }
+
+    .greetingUser .iconman {
+        min-width: 36px;
+        height: 36px;
+        padding: 8px;
+    }
+
+    .nav {
+        font-size: 12px;
+    }
 }

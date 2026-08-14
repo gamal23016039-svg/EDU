@@ -6,10 +6,13 @@ function RoleProtected({ allowedRoles }) {
   const { user } = useContext(AuthContext);
 
   if (!user) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/Login" replace />;
   }
 
-  if (!allowedRoles.includes(user.role)) {
+  const normalized = String(user.role || "").toLowerCase();
+  const allowed = allowedRoles.map((role) => String(role).toLowerCase());
+
+  if (!allowed.includes(normalized)) {
     return <Navigate to="/" replace />;
   }
 

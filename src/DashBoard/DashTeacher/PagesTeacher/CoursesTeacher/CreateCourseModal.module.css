@@ -1,0 +1,557 @@
+/* Backdrop */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Container */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(94, 96, 206, 0.2);
+    width: 90%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 999;
+    animation: slideUp 0.3s ease-out;
+    border: 1px solid #7F5AF015;
+}
+
+/* Close Button */
+.closeBtn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: #7F5AF015;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #5E60CE;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.closeBtn:hover {
+    background: #9B5DE530;
+    color: #9B5DE5;
+    transform: scale(1.1) rotate(90deg);
+}
+
+/* Modal Header */
+.header {
+    padding: 32px 32px 0;
+    border-bottom: 2px solid #7F5AF020;
+    background: linear-gradient(135deg, rgba(94, 96, 206, 0.02) 0%, rgba(127, 90, 240, 0.02) 100%);
+}
+
+.header h2 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #5E60CE, #9B5DE5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header p {
+    margin: 0;
+    color: #7F5AF0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Form */
+.form {
+    padding: 32px;
+}
+
+/* Fieldset and Legend */
+.fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 32px;
+}
+
+.fieldset:last-of-type {
+    margin-bottom: 32px;
+}
+
+.legend {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5E60CE;
+    padding: 12px 0;
+    margin: 0 0 20px;
+    display: block;
+    border-left: 4px solid #9B5DE5;
+    padding-left: 12px;
+}
+
+/* Form Group */
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5E60CE;
+}
+
+/* Input Fields */
+.input,
+.textarea,
+.select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #7F5AF020;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #5E60CE;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    background: #fafaf8;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+    outline: none;
+    border-color: #9B5DE5;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(155, 93, 229, 0.1);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: #9B5DE580;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235E60CE' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+    padding-right: 40px;
+}
+
+/* Thumbnail Upload */
+.thumbnailContainer {
+    position: relative;
+}
+
+.uploadArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    border: 2px dashed #9B5DE5;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(94, 96, 206, 0.05) 0%, rgba(127, 90, 240, 0.05) 100%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.uploadArea:hover {
+    border-color: #5E60CE;
+    background: linear-gradient(135deg, rgba(94, 96, 206, 0.1) 0%, rgba(127, 90, 240, 0.1) 100%);
+    transform: scale(1.01);
+}
+
+.uploadIcon {
+    font-size: 48px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.uploadArea:hover .uploadIcon {
+    transform: scale(1.15);
+}
+
+.uploadArea p {
+    margin: 0 0 4px;
+    font-weight: 700;
+    color: #5E60CE;
+}
+
+.uploadArea span {
+    font-size: 12px;
+    color: #7F5AF0;
+}
+
+.fileInput {
+    display: none;
+}
+
+/* Thumbnail Preview */
+.thumbnailPreviewWrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.thumbnailImage {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 12px;
+    border: 2px solid #9B5DE530;
+    margin-bottom: 12px;
+    box-shadow: 0 8px 20px rgba(94, 96, 206, 0.15);
+    transition: all 0.3s ease;
+}
+
+.thumbnailImage:hover {
+    border-color: #9B5DE5;
+    box-shadow: 0 12px 30px rgba(155, 93, 229, 0.25);
+}
+
+.removeThumbBtn {
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #7F5AF010, #9B5DE510);
+    border: 2px solid #9B5DE5;
+    border-radius: 8px;
+    color: #9B5DE5;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.removeThumbBtn:hover {
+    background: linear-gradient(135deg, #9B5DE520, #7F5AF020);
+    color: #5E60CE;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(94, 96, 206, 0.2);
+}
+
+/* Lessons List */
+.lessonsList {
+    margin-bottom: 24px;
+}
+
+.lessonCard {
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(94, 96, 206, 0.05) 0%, rgba(127, 90, 240, 0.05) 100%);
+    border: 2px solid #7F5AF020;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+}
+
+.lessonCard:hover {
+    border-color: #9B5DE5;
+    box-shadow: 0 4px 12px rgba(94, 96, 206, 0.1);
+}
+
+.lessonCard:last-child {
+    margin-bottom: 0;
+}
+
+.lessonHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #9B5DE520;
+}
+
+.lessonHeader h4 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #5E60CE;
+}
+
+.removeBtn {
+    padding: 6px 14px;
+    background: linear-gradient(135deg, rgba(155, 93, 229, 0.1), rgba(127, 90, 240, 0.05));
+    border: 2px solid #9B5DE5;
+    border-radius: 6px;
+    color: #9B5DE5;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.removeBtn:hover {
+    background: linear-gradient(135deg, #9B5DE520, #7F5AF015);
+    color: #5E60CE;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(155, 93, 229, 0.2);
+}
+
+/* Video Upload */
+.videoUpload {
+    position: relative;
+}
+
+.videoUploadLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    border: 2px dashed #9B5DE5;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(94, 96, 206, 0.05) 0%, rgba(127, 90, 240, 0.05) 100%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.videoUploadLabel:hover {
+    border-color: #5E60CE;
+    background: linear-gradient(135deg, rgba(94, 96, 206, 0.1) 0%, rgba(127, 90, 240, 0.1) 100%);
+    transform: scale(1.01);
+}
+
+.videoUploadLabel p {
+    margin: 8px 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #5E60CE;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Add Lesson Button */
+.addLessonBtn {
+    width: 100%;
+    padding: 14px;
+    background: transparent;
+    border: 2px dashed #9B5DE5;
+    border-radius: 8px;
+    color: #9B5DE5;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.addLessonBtn:hover {
+    background: linear-gradient(135deg, rgba(94, 96, 206, 0.05), rgba(127, 90, 240, 0.05));
+    border-color: #5E60CE;
+    color: #5E60CE;
+    transform: translateY(-2px);
+}
+
+/* Form Actions */
+.formActions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    padding-top: 24px;
+    border-top: 2px solid #7F5AF020;
+    margin-top: 24px;
+}
+
+.cancelBtn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #7F5AF010, #9B5DE510);
+    border: 2px solid #9B5DE5;
+    border-radius: 8px;
+    color: #9B5DE5;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancelBtn:hover {
+    background: linear-gradient(135deg, #9B5DE520, #7F5AF020);
+    color: #5E60CE;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(94, 96, 206, 0.2);
+}
+
+.submitBtn {
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #5E60CE, #9B5DE5);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(94, 96, 206, 0.3);
+}
+
+.submitBtn:hover {
+    background: linear-gradient(135deg, #7F5AF0, #5E60CE);
+    box-shadow: 0 8px 20px rgba(127, 90, 240, 0.4);
+    transform: translateY(-3px);
+}
+
+.submitBtn:active {
+    transform: scale(0.98);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal {
+        width: 95%;
+        max-height: 95vh;
+        max-width: 100%;
+    }
+
+    .header {
+        padding: 24px 20px 0;
+    }
+
+    .header h2 {
+        font-size: 22px;
+    }
+
+    .form {
+        padding: 24px 20px;
+    }
+
+    .formActions {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .cancelBtn,
+    .submitBtn {
+        width: 100%;
+    }
+
+    .lessonHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .removeBtn {
+        align-self: flex-start;
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal {
+        border-radius: 12px;
+    }
+
+    .closeBtn {
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
+    }
+
+    .header {
+        padding: 20px 16px 0;
+    }
+
+    .header h2 {
+        font-size: 18px;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    .form {
+        padding: 20px 16px;
+    }
+
+    .legend {
+        font-size: 15px;
+        padding: 8px 0;
+        padding-left: 10px;
+    }
+
+    .label {
+        font-size: 13px;
+    }
+
+    .input,
+    .textarea,
+    .select {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+
+    .uploadArea {
+        padding: 30px 16px;
+    }
+
+    .uploadIcon {
+        font-size: 40px;
+    }
+
+    .lessonCard {
+        padding: 16px;
+    }
+
+    .lessonHeader h4 {
+        font-size: 14px;
+    }
+
+    .removeBtn {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+
+    .videoUploadLabel {
+        padding: 24px 16px;
+    }
+
+    .videoUploadLabel p {
+        font-size: 13px;
+    }
+}

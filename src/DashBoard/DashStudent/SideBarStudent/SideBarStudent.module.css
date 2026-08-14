@@ -1,6 +1,6 @@
 .sidebar {
   width: 260px;
-  background: linear-gradient(180deg, #153b43, #1b656f);
+  background: linear-gradient(135deg, #5E60CE 0%, #7F5AF0 50%, #9B5DE5 100%);
   color: white;
   padding: 22px 20px;
   display: flex;
@@ -47,7 +47,7 @@
 }
 
 .link:hover {
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
   color: white;
 }
 
@@ -57,14 +57,16 @@
   padding: 12px 14px;
   border-radius: 12px;
   font-weight: 800;
-  background: #10b98d;
+  background: rgba(155, 93, 229, 0.4);
+  border-left: 3px solid #9B5DE5;
+  padding-left: 11px;
 }
 
 .logout {
   margin-top: auto;
   background: transparent;
   color: white;
-  border: 1px solid rgba(255,255,255,0.45);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 12px;
   padding: 12px;
   font-weight: 700;

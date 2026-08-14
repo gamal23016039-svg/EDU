@@ -11,22 +11,31 @@
 
 .welcome h1 {
   margin: 0;
-  color: #173947;
+  color: #5E60CE;
   font-size: 34px;
 }
 
 .welcome p {
   margin: 8px 0 0;
-  color: #6a7a82;
+  color: #7F5AF0;
 }
 
 .statusButton {
-  background: #15a871;
+  background: linear-gradient(135deg, #5E60CE, #9B5DE5);
   color: white;
   border: none;
   border-radius: 12px;
   padding: 12px 20px;
   font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(94, 96, 206, 0.3);
+}
+
+.statusButton:hover {
+  background: linear-gradient(135deg, #7F5AF0, #5E60CE);
+  box-shadow: 0 6px 20px rgba(127, 90, 240, 0.4);
+  transform: translateY(-2px);
 }
 
 .summaryGrid {
@@ -40,12 +49,19 @@
   background: white;
   border-radius: 16px;
   padding: 20px;
-  border: 1px solid #dcecf1;
+  border: 1px solid #7F5AF020;
+  box-shadow: 0 4px 12px rgba(94, 96, 206, 0.06);
+  transition: all 0.3s ease;
+}
+
+.summaryCard:hover {
+  border-color: #9B5DE5;
+  box-shadow: 0 6px 16px rgba(155, 93, 229, 0.1);
 }
 
 .summaryCard h3 {
   font-size: 14px;
-  color: #6d7983;
+  color: #7F5AF0;
   margin: 0 0 8px;
 }
 

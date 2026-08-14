@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 28px;
-    border-bottom: 1px solid #5E60CE;
+    border-bottom: 2px solid #7F5AF0;
 }
 
 .title {
@@ -29,12 +29,19 @@
 }
 
 .iconButton {
-    background: #9a5de510;
+    background: #7F5AF015;
     border: none;
     border-radius: 12px;
     width: 40px;
     height: 40px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    color: #5E60CE;
+}
+
+.iconButton:hover {
+    background: #9B5DE530;
+    color: #9B5DE5;
 }
 
 .profileButton {

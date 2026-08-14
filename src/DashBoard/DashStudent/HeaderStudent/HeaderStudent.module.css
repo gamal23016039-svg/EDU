@@ -5,17 +5,17 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 28px;
-  border-bottom: 1px solid #dcecf1;
+  border-bottom: 2px solid #7F5AF0;
 }
 
 .title {
   margin: 4px 0 0;
-  color: #153940;
+  color: #5E60CE;
   font-size: 28px;
 }
 
 .welcomeText {
-  color: #53727c;
+  color: #9B5DE5;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -29,19 +29,33 @@
 }
 
 .iconButton {
-  background: #edf7f2;
+  background: #7F5AF015;
   border: none;
   border-radius: 12px;
   width: 40px;
   height: 40px;
   cursor: pointer;
+  color: #5E60CE;
+  transition: all 0.3s ease;
+}
+
+.iconButton:hover {
+  background: #9B5DE530;
+  color: #9B5DE5;
 }
 
 .profileButton {
-  background: #163b40;
+  background: linear-gradient(135deg, #5E60CE, #7F5AF0);
   color: white;
   border: none;
   padding: 10px 16px;
   border-radius: 12px;
   font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(94, 96, 206, 0.2);
+}
+
+.profileButton:hover {
+  background: linear-gradient(135deg, #7F5AF0, #9B5DE5);
+  box-shadow: 0 4px 12px rgba(127, 90, 240, 0.3);
 }
